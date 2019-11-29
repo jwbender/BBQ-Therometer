@@ -3,7 +3,7 @@
 #include <ESP8266_Lib.h>
 #include <BlynkSimpleShieldEsp8266.h>
 
-char auth[] = "yAOlH42DMWGx3wFkBne2JY9tUEpw1GCb";
+char auth[] = "8I5EtnAfCRot-_e_Rux6eyVwpiPnrOTL";
 char ssid[] = "Benders Scotland";
 char pass[] = "$ingapore14";
 

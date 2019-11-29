@@ -12,10 +12,10 @@
   
  ****************************************************/
 
-#define     THERMISTOR_PIN     A1      // Pin between the thermistor and 
+#define     THERMISTOR_PIN     A2      // Pin between the thermistor and 
                                       // series resistor.
 
-#define     SERIES_RESISTOR    1000  // Series resistor value in ohms.
+#define     SERIES_RESISTOR    10000  // Series resistor value in ohms.
 
 #define     USE_FAHRENHEIT     true   // True to use Fahrenheit, false to
                                       // use celsius.
@@ -59,7 +59,7 @@ void setup(void) {
   
   printTempMessage();
   
-  float T1 = 35;
+  float T1 = 167;
   float R1 = readResistance();
   
   Serial.print("Got rESISTANCE value: "); Serial.println(R1, 3);
@@ -72,7 +72,7 @@ void setup(void) {
   
   printTempMessage();
   
-  float T2 = 78;
+  float T2 = 102;
   float R2 = readResistance();
     Serial.print("Got rESISTANCE value: "); Serial.println(R2, 3);
   Serial.print("Got temperature value: "); Serial.println(T2, 3);
@@ -84,7 +84,7 @@ void setup(void) {
   
   printTempMessage();
   
-  float T3 = 168;
+  float T3 = 33;
   float R3 = readResistance();
     Serial.print("Got rESISTANCE value: "); Serial.println(R3, 3);
   Serial.print("Got temperature value: "); Serial.println(T3, 3);
@@ -173,3 +173,11 @@ float readTemp() {
   float kelvin = 1.0/(A + B*log(R) + C*pow(log(R), 3.0));
   return kelvin;
 }
+
+//A= 0.000871981716
+//B= 0.000214324808
+//C= 0.000000137017
+
+//A= 0.000873564243
+//B= 0.000229869222
+//C= 0.000001048926
